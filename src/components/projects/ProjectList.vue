@@ -1,5 +1,6 @@
 <script>
 // import MyComponent from "./components/MyComponent.vue";
+import ProjectCard from "./components/projects/ProjectCard.vue";
 
 export default {
   data() {
@@ -12,9 +13,9 @@ export default {
     projects: Array,
   },
 
-  // components: {
-  //   MyComponent,
-  // },
+  components: {
+    ProjectCard,
+  },
 };
 </script>
 
@@ -22,13 +23,7 @@ export default {
   <div class="container">
     <h2>Project List</h2>
     <div class="row row-cols-3 g-4">
-      <div class="col" v-for="project in projects">
-        <div class="card h-100">
-          <div class="card-body">
-            <h4>{{ project.title }}</h4>
-          </div>
-        </div>
-      </div>
+      <ProjectCard v-for="project in projects"></ProjectCard>
     </div>
   </div>
 </template>
