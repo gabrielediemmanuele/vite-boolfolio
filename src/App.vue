@@ -31,7 +31,10 @@ export default {
 </script>
 
 <template>
-  <h1>Projects</h1>
+  <div class="container mt-3">
+    <h1>Projects</h1>
+  </div>
+
   <hr />
   <ProjectList :projects="projects"></ProjectList>
 </template>

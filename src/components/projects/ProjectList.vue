@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div class="container">
-    <h2>Project List</h2>
+    <h2 class="mb-3">Project List</h2>
     <div class="row row-cols-3 g-4">
       <ProjectCard v-for="project in projects" :project="project"></ProjectCard>
     </div>
