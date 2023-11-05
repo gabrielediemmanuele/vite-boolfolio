@@ -1,6 +1,6 @@
 <script>
 // import MyComponent from "./components/MyComponent.vue";
-import ProjectCard from "./components/projects/ProjectCard.vue";
+import ProjectCard from "./ProjectCard.vue";
 
 export default {
   data() {
