@@ -7,12 +7,25 @@ import axios from "axios";
 export default {
   data() {
     return {
-      /* title: "Hello world", */
+      projects: [],
+      baseUrl: "http://127.0.0.1:8000/api/",
     };
   },
 
   components: {
     ProjectList,
+  },
+
+  methods: {
+    fetchProjects(uri = this.baseUrl + "projects") {
+      axios.get(uri).then((response) => {
+        this.projects = response.data.data;
+      });
+    },
+  },
+
+  created() {
+    this.fetchProjects();
   },
 };
 </script>
@@ -20,7 +33,7 @@ export default {
 <template>
   <h1>VEDIAMO</h1>
   <hr />
-  <ProjectList></ProjectList>
+  <ProjectList :projects="projects"></ProjectList>
 </template>
 
 <style lang="scss" scoped></style>
