@@ -1,21 +1,26 @@
 <script>
 // import MyComponent from "./components/MyComponent.vue";
+import ProjectList from "./components/projects/ProjectList.vue";
+
+import axios from "axios";
 
 export default {
   data() {
     return {
-      title: "Hello world",
+      /* title: "Hello world", */
     };
   },
 
-  // components: {
-  //   MyComponent,
-  // },
+  components: {
+    ProjectList,
+  },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <h1>VEDIAMO</h1>
+  <hr />
+  <ProjectList></ProjectList>
 </template>
 
 <style lang="scss" scoped></style>

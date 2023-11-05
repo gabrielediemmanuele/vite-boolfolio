@@ -37,3 +37,7 @@ dentro style.scss
 @import "bootstrap/scss/bootstrap";
 
 creare componenti...e ora si comincia!
+
+## AXIOS
+
+npm i axios
