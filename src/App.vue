@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <h1>VEDIAMO</h1>
+  <h1>Projects</h1>
   <hr />
   <ProjectList :projects="projects"></ProjectList>
 </template>
