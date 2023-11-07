@@ -37,6 +37,7 @@ export default {
 
   <hr />
   <ProjectList :projects="projects"></ProjectList>
+  <router-view></router-view>
 </template>
 
 <style lang="scss" scoped></style>
