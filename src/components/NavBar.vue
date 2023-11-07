@@ -4,7 +4,7 @@
 export default {
   data() {
     return {
-      title: "Hello world",
+      /* title: "Hello world", */
     };
   },
 
@@ -15,11 +15,11 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark p-0 mb-2">
+    <div class="container-fluid bg-dark p-2">
+      <a class="navbar-brand text-light" href="#">MyProject</a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler bg-light"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -32,15 +32,17 @@ export default {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Homepage</a>
+            <a class="nav-link active text-light" aria-current="page" href="#"
+              >Homepage</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
+            <a class="nav-link active text-light" aria-current="page" href="#"
               >Portfolio</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Others</a>
+            <a class="nav-link text-light" href="#">Others</a>
           </li>
         </ul>
       </div>

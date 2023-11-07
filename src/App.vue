@@ -33,11 +33,6 @@ export default {
 </script>
 
 <template>
-  <div class="container mt-3">
-    <h1>Projects</h1>
-  </div>
-
-  <hr />
   <NavBar></NavBar>
   <ProjectList :projects="projects"></ProjectList>
   <router-view></router-view>
