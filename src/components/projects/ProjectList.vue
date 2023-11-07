@@ -2,11 +2,11 @@
 // import MyComponent from "./components/MyComponent.vue";
 import ProjectCard from "./ProjectCard.vue";
 
+import axios from "axios";
+
 export default {
   data() {
-    return {
-      /* title: "Hello world", */
-    };
+    return {};
   },
 
   props: {

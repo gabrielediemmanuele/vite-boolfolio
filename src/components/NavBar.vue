@@ -32,17 +32,20 @@ export default {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#"
-              >Homepage</a
+            <router-link
+              class="nav-link active text-light"
+              aria-current="page"
+              :to="{ name: 'home' }"
+              >Homepage</router-link
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#"
-              >Portfolio</a
+            <router-link
+              class="nav-link active text-light"
+              aria-current="page"
+              :to="{ name: 'portfolio' }"
+              >Portfolio</router-link
             >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Others</a>
           </li>
         </ul>
       </div>
