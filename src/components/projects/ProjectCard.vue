@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div class="col">
+  <div class="col mt-5 mb-5">
     <div class="card h-100">
       <div class="card-body">
         <h4>Id: {{ project.id }}</h4>
@@ -30,6 +30,7 @@ export default {
         <li class="list-group-item">Descrizione: {{ project.description }}</li>
       </ul>
     </div>
+    <button type="button" class="btn btn-primary mt-1">Vedi</button>
   </div>
 </template>
 
