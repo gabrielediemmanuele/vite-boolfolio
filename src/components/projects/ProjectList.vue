@@ -21,7 +21,11 @@ export default {
   <div class="container">
     <h2 class="mb-3">Project List</h2>
     <div class="row row-cols-3">
-      <ProjectCard v-for="project in projects" :project="project"></ProjectCard>
+      <ProjectCard
+        v-for="project in projects"
+        :detailView="false"
+        :project="project"
+      ></ProjectCard>
     </div>
   </div>
 </template>

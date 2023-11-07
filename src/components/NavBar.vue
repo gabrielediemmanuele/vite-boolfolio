@@ -17,7 +17,9 @@ export default {
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark p-0 mb-2">
     <div class="container-fluid bg-dark p-2">
-      <a class="navbar-brand text-light" href="#">MyProject</a>
+      <router-link class="navbar-brand text-light" :to="{ name: 'portfolio' }"
+        >MyProject</router-link
+      >
       <button
         class="navbar-toggler bg-light"
         type="button"

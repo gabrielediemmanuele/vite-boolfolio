@@ -10,6 +10,7 @@ export default {
 
   props: {
     project: Object,
+    detailView: Boolean,
   },
 };
 </script>
@@ -30,7 +31,18 @@ export default {
         <li class="list-group-item">Descrizione: {{ project.description }}</li>
       </ul>
     </div>
-    <button type="button" class="btn btn-primary mt-1">Vedi</button>
+    <div class="card-footer" v-if="!detailView">
+      <router-link
+        :to="{ name: 'project-detail', params: { id: project.id } }"
+        class="btn btn-primary mt-1"
+        >Vedi</router-link
+      >
+    </div>
+    <div class="card-footer" v-if="detailView">
+      <router-link :to="{ name: 'portfolio' }" class="btn btn-danger mt-1"
+        >Torna al Portfolio</router-link
+      >
+    </div>
   </div>
 </template>
 

@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 /* importare le pagine  */
 import HomePage from "./pages/HomePage.vue";
 import PortfolioPage from "./pages/PortfolioPage.vue";
+import ProjectPage from "./pages/ProjectPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,6 +17,11 @@ const router = createRouter({
       path: "/portfolio",
       name: "portfolio",
       component: PortfolioPage,
+    },
+    {
+      path: "/portfolio/:id",
+      name: "project-detail",
+      component: ProjectPage,
     },
   ],
 });
