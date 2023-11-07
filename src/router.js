@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 /* importare le pagine  */
-/* import HomePage from './pages/HomePage.vue';  */
+import HomePage from "./pages/HomePage.vue";
+import HomePage from "./pages/PortfolioPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,13 +14,8 @@ const router = createRouter({
     },
     {
       path: "/portfolio",
-      name: "projects",
-      component: Portfolio,
-    },
-    {
-      path: "/",
-      name: "portfolio:id",
-      component: Project,
+      name: "portfolio",
+      component: PortfolioPage,
     },
   ],
 });

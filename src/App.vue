@@ -1,6 +1,7 @@
 <script>
 // import MyComponent from "./components/MyComponent.vue";
 import ProjectList from "./components/projects/ProjectList.vue";
+import NavBar from "./components/NavBar.vue";
 
 import axios from "axios";
 
@@ -14,6 +15,7 @@ export default {
 
   components: {
     ProjectList,
+    NavBar,
   },
 
   methods: {
@@ -36,6 +38,7 @@ export default {
   </div>
 
   <hr />
+  <NavBar></NavBar>
   <ProjectList :projects="projects"></ProjectList>
   <router-view></router-view>
 </template>
