@@ -1,21 +1,43 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+import axios from "axios";
+
+import ProjectCard from "../projects/ProjectCard.vue";
 
 export default {
   data() {
     return {
-      title: "Hello world",
+      projects: [],
+      baseUrl: "http://127.0.0.1:8000/api/",
     };
   },
 
-  // components: {
-  //   MyComponent,
-  // },
+  props: {
+    type_id: Number,
+  },
+
+  components: {
+    ProjectCard,
+  },
+
+  created() {
+    axios
+      .get(this.baseUrl + "projects-by-type/" + this.type_id)
+      .then((response) => {
+        this.projects = response.data.data;
+      });
+  },
 };
 </script>
 
 <template>
   <h1>{{ title }}</h1>
+  <div class="row row-cols-3 g4">
+    <ProjectCard
+      v-for="project in projects"
+      :project="project"
+      :isDetail="false"
+    ></ProjectCard>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
