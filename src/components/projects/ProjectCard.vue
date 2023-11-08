@@ -21,6 +21,7 @@ export default {
       <div class="card-body">
         <h4>Id: {{ project.id }}</h4>
         <h5>Title: {{ project.title }}</h5>
+        <span class="type-label">{{ project.type.label }}</span>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Author: {{ project.author }}</li>
@@ -46,4 +47,11 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.type-label {
+  background-color: rgb(0, 76, 255);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+</style>
