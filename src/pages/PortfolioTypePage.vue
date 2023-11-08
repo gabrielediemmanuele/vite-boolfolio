@@ -28,18 +28,40 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
-  <span class="type-label">
-    {{ type.label }}
-  </span>
-  <ProjectTypeList :type_id="type.id" v-if="type.id"></ProjectTypeList>
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <span class="type-label" :class="'label-' + type.label">
+      {{ type.label }}
+    </span>
+    <span>
+      <router-link
+        :to="{ name: 'portfolio' }"
+        class="btn btn-danger mt-1 my-2 mx-4"
+        >Torna al Portfolio</router-link
+      >
+    </span>
+    <ProjectTypeList :type_id="type.id" v-if="type.id"></ProjectTypeList>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .type-label {
-  background-color: rgb(0, 76, 255);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label-Front-End {
+  background-color: rgb(50, 124, 86);
+}
+
+.label-Back-End {
+  background-color: rgb(212, 119, 66);
+}
+
+.label-Full-stack {
+  background-color: rgb(76, 55, 101);
 }
 </style>
