@@ -20,14 +20,14 @@ const router = createRouter({
       component: PortfolioPage,
     },
     {
-      path: "/portfolio/:id",
-      name: "project-detail",
-      component: ProjectPage,
-    },
-    {
       path: "/portfolio/type/:type_id",
       name: "portfolio-type",
       component: PortfolioTypePage,
+    },
+    {
+      path: "/portfolio/:id",
+      name: "project-detail",
+      component: ProjectPage,
     },
   ],
 });

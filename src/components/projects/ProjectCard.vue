@@ -29,6 +29,7 @@ export default {
             },
           }"
           class="type-label"
+          :class="'label-' + project.type.label"
           >{{ project.type.label }}
         </router-link>
       </div>
@@ -62,5 +63,17 @@ export default {
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.label-Front-End {
+  background-color: rgb(0, 255, 123);
+}
+
+.label-Front-End {
+  background-color: rgb(0, 255, 123);
+}
+
+.label-Front-End {
+  background-color: rgb(0, 255, 123);
 }
 </style>

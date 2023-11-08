@@ -30,10 +30,10 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
   <div class="row row-cols-3 g4">
     <ProjectCard
-      v-for="project in projects"
+      v-for="(project, index) in projects"
+      :key="index"
       :project="project"
       :detailView="false"
     ></ProjectCard>

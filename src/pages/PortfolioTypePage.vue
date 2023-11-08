@@ -19,7 +19,7 @@ export default {
 
   created() {
     axios
-      .get(this.baseUrl + "types/" + this.$route.type_id)
+      .get(this.baseUrl + "types/" + this.$route.params.type_id)
       .then((response) => {
         this.type = response.data;
       });
