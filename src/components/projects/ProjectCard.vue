@@ -59,21 +59,22 @@ export default {
 
 <style lang="scss" scoped>
 .type-label {
-  background-color: rgb(0, 76, 255);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .label-Front-End {
-  background-color: rgb(0, 255, 123);
+  background-color: rgb(50, 124, 86);
 }
 
-.label-Front-End {
-  background-color: rgb(0, 255, 123);
+.label-Back-End {
+  background-color: rgb(212, 119, 66);
 }
 
-.label-Front-End {
-  background-color: rgb(0, 255, 123);
+.label-Full-stack {
+  background-color: rgb(76, 55, 101);
 }
 </style>
