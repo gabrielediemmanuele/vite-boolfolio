@@ -35,7 +35,7 @@ export default {
     <ProjectCard
       v-for="project in projects"
       :project="project"
-      :isDetail="false"
+      :detailView="false"
     ></ProjectCard>
   </div>
 </template>
