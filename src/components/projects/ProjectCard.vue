@@ -21,7 +21,17 @@ export default {
       <div class="card-body">
         <h4>Id: {{ project.id }}</h4>
         <h5>Title: {{ project.title }}</h5>
-        <span class="type-label">{{ project.type.label }}</span>
+        <router-link
+          :to="{
+            name: 'portfolio-type',
+            params: {
+              type_id: project.type_id,
+            },
+          }"
+          class="type-label"
+          :class="'label-' + project.type.label"
+          >{{ project.type.label }}
+        </router-link>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Author: {{ project.author }}</li>
@@ -49,9 +59,22 @@ export default {
 
 <style lang="scss" scoped>
 .type-label {
-  background-color: rgb(0, 76, 255);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label-Front-End {
+  background-color: rgb(50, 124, 86);
+}
+
+.label-Back-End {
+  background-color: rgb(212, 119, 66);
+}
+
+.label-Full-stack {
+  background-color: rgb(76, 55, 101);
 }
 </style>
