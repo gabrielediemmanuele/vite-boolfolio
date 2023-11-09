@@ -41,29 +41,3 @@ creare componenti...e ora si comincia!
 ## AXIOS
 
 npm i axios
-
-import di card
-
-components: {}
-
-<div class="col-3">
-<span v-for="type in types"
-:key="type.id"
-:class="{
-    disabled: !type.active,
-    'label-' + type.label,
-}"
-@click=toggleType(type)
-class="type-label">
-{{ type.label }}
-</span>
-</div>
-
-<div class="col-9">
-<ProjectCard
-v-for="project in filteredProjects"
-:key="project.id"
-:project="project"
-:detailView="false">
-</ProjectCard> 
-</div>
