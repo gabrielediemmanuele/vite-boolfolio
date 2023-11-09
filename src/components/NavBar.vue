@@ -49,6 +49,14 @@ export default {
               >Portfolio</router-link
             >
           </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link active text-light"
+              aria-current="page"
+              :to="{ name: 'advanced-filter' }"
+              >Advanced Filter Search</router-link
+            >
+          </li>
         </ul>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "./pages/HomePage.vue";
 import PortfolioPage from "./pages/PortfolioPage.vue";
 import ProjectPage from "./pages/ProjectPage.vue";
+import AdvancedFilterPage from "./pages/AdvancedFilterPage.vue";
 import PortfolioTypePage from "./pages/PortfolioTypePage.vue";
 
 const router = createRouter({
@@ -23,6 +24,11 @@ const router = createRouter({
       path: "/portfolio/type/:type_id",
       name: "portfolio-type",
       component: PortfolioTypePage,
+    },
+    {
+      path: "/advanced-filter",
+      name: "advanced-filter",
+      component: AdvancedFilterPage,
     },
     {
       path: "/portfolio/:id",
