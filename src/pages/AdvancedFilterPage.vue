@@ -33,7 +33,6 @@ export default {
         })
         .then((response) => {
           this.filteredProjects = response.data.data;
-          console.log(this.filteredProjects);
         });
     },
 
@@ -45,16 +44,10 @@ export default {
             active: false,
           };
         });
-        /* console.log(this.types); */
       });
     },
 
     toggleType(type) {
-      /*  this.types = this.types.map((oldType) => {
-        if (oldType.id == clickedType.id) {
-        }
-        return oldType;
-      }); */
       type.active = !type.active;
       this.fetchProjects();
     },
