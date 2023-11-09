@@ -7,6 +7,7 @@ export default {
     return {
       baseUrl: "http://127.0.0.1:8000/api/",
       types: [],
+      filteredProjects: [],
     };
   },
 
@@ -23,7 +24,7 @@ export default {
       });
 
       axios
-        .post(
+        .get(
           this.baseUrl + "get-projects-by-filters",
           { activeTypes },
           { headers: { "Content-Type": "multipart/from-data" } }
@@ -41,6 +42,7 @@ export default {
             active: false,
           };
         });
+        console.log(this.types);
       });
     },
 
@@ -51,25 +53,23 @@ export default {
   },
 
   created() {
-    this.fetchProjects();
     this.fetchTypes();
+    this.fetchProjects();
   },
 };
 </script>
 
 <template>
   <div class="container">
-    <span
-      class="type-label"
-      v-for="type in types"
-      :key="type.id"
-      :class="{
-            disabled: !type.active,
-            'label-' + type.label,
-        }"
-      @click="toggleType(type)"
-    >
-    </span>
+    <h1>Advanced Research</h1>
+
+    <div class="row">
+      <div class="col-3">
+        <h3>Select a type</h3>
+
+        <span> </span>
+      </div>
+    </div>
   </div>
 </template>
 
