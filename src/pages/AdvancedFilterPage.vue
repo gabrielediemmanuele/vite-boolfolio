@@ -19,7 +19,7 @@ export default {
       const activeTypes = [];
 
       this.types.forEach((type) => {
-        if (types.active) activeTypes.push(type.id);
+        if (type.active) activeTypes.push(type.id);
       });
 
       axios
@@ -58,7 +58,39 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <div class="container">
+    <span
+      class="type-label"
+      v-for="type in types"
+      :key="type.id"
+      :class="{
+            disabled: !type.active,
+            'label-' + type.label,
+        }"
+      @click="toggleType(type)"
+    >
+    </span>
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.type-label {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label-Front-End {
+  background-color: rgb(50, 124, 86);
+}
+
+.label-Back-End {
+  background-color: rgb(212, 119, 66);
+}
+
+.label-Full-stack {
+  background-color: rgb(76, 55, 101);
+}
+</style>
